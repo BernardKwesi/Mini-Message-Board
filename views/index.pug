@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div(id="header")
+    h1= title
+    p Welcome to #{title}
+
+
+  div.button-container  
+  a(class='button' href="/new") Add Message 
+
+  div.content
+   each message in messages
+     div(class="container")
+      h2= message.text 
+      p= message.user 
+      p= message.added
+      
