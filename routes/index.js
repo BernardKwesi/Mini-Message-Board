@@ -26,9 +26,7 @@ router.post('/new', (req, res, next) => {
       let newMessage = {
         text :  req.body.message,
         user : req.body.user,
-        added : moment()
-        .startOf('hour' - 1)
-        .fromNow(),
+        added : new Date()
       }
 
       messages.unshift(newMessage);

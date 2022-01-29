@@ -5,9 +5,10 @@ block content
     h1= title
     p Welcome to #{title}
 
-
+  
   div.button-container  
-  a(class='button' href="/new") Add Message 
+    a(href="/new") 
+       button.button  Add Message 
 
   div.content
    each message in messages
@@ -16,3 +17,4 @@ block content
       p= message.user 
       p= message.added
       
+  

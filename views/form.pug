@@ -1,11 +1,14 @@
 extends layout 
 block content
-
- form(method='POST' action='/new') 
-    div 
-        label(for="user") username 
-        input(type="text" name="user")
-    div  
-        label(for="message") Message Text
-        input(type="text" name="message")
-    button(type="submit")  Submit
+ 
+    div.content
+   
+        form(method='POST' action='/new' class="form") 
+            div.form-group 
+                label(for="user" class="form-label") username 
+                input(type="text" name="user" class="form-control")
+       
+            div.form-group  
+                label(for="message" class="form-label") Message Text
+                input(type="text" name="message" class="form-control")
+            button(type="submit" class="submit")  Submit
